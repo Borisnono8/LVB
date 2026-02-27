@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>LVB – La Vie Est Belle</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <style>
+    :root{
+      --blue:#0B5ED7;
+      --blue-dark:#083B8A;
+      --green:#7BC043;
+      --green-dark:#4E9F2D;
+      --gray:#F5F7FA;
+    }
+
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+      font-family:"Segoe UI", Arial, sans-serif;
+    }
+
+    body{
+      background:#fff;
+      color:#333;
+      scroll-behavior:smooth;
+    }
+
+    /* MENU */
+    nav{
+      position:fixed;
+      top:20px;
+      right:30px;
+      z-index:1000;
+    }
+
+    nav a{
+      margin-left:25px;
+      text-decoration:none;
+      font-weight:600;
+      color:var(--blue-dark);
+    }
+
+    nav a:hover{
+      color:var(--green-dark);
+    }
+
+    /* HERO */
+    .hero{
+      height:100vh;
+      display:flex;
+      justify-content:center;
+      align-items:center;
+      background:linear-gradient(135deg,#f7faff,#ffffff);
+    }
+
+    .hero-card{
+      background:#fff;
+      padding:50px 40px;
+      border-radius:18px;
+      text-align:center;
+      max-width:900px;
+      width:100%;
+      box-shadow:0 25px 60px rgba(0,0,0,0.12);
+    }
+
+    .hero-card img{
+      width:120px;
+      margin-bottom:15px;
+    }
+
+    .logo-text{
+      font-size:38px;
+      font-weight:900;
+      margin-bottom:25px;
+    }
+
+    .logo-text span:nth-child(1){color:var(--blue);}
+    .logo-text span:nth-child(2){color:var(--green);}
+    .logo-text span:nth-child(3){color:var(--blue-dark);}
+
+    .hero-card h1{
+      font-size:40px;
+      line-height:1.4;
+      color:var(--blue-dark);
+    }
+
+    .hero-card h1 span{
+      color:var(--green-dark);
+    }
+
+    /* SECTIONS */
+    section{
+      padding:90px 20px;
+    }
+
+    .container{
+      max-width:1100px;
+      margin:auto;
+    }
+
+    .section-title{
+      font-size:30px;
+      color:var(--blue-dark);
+      margin-bottom:25px;
+    }
+
+    .section-title::after{
+      content:"";
+      width:70px;
+      height:4px;
+      background:var(--green);
+      display:block;
+      margin-top:10px;
+    }
+
+    .section-content{
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:40px;
+      align-items:center;
+    }
+
+    .section-content p{
+      font-size:17px;
+      line-height:1.8;
+    }
+
+    /* IMAGE PLACE */
+    .image-box{
+      width:100%;
+      height:280px;
+      background:var(--gray);
+      border-radius:10px;
+      display:flex;
+      justify-content:center;
+      align-items:center;
+      font-size:22px;
+      color:#aaa;
+      font-weight:600;
+    }
+
+    /* LIST */
+    ul{
+      list-style:none;
+    }
+
+    ul li{
+      margin-bottom:12px;
+      font-weight:600;
+    }
+
+    ul li::before{
+      content:"✔ ";
+      color:var(--green-dark);
+    }
+
+    /* SOCIAL */
+    .socials a{
+      font-size:30px;
+      margin-right:20px;
+      color:var(--blue-dark);
+    }
+
+    .socials a:hover{
+      color:var(--green-dark);
+    }
+
+    /* FOOTER */
+    footer{
+      background:var(--blue-dark);
+      color:#fff;
+      text-align:center;
+      padding:30px 15px;
+    }
+
+    /* RESPONSIVE */
+    @media(max-width:900px){
+      .section-content{
+        grid-template-columns:1fr;
+      }
+
+      .hero-card h1{
+        font-size:28px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+<nav>
+  <a href="#about">LVB</a>
+  <a href="#delivery">Livraison</a>
+  <a href="#service">Service client</a>
+  <a href="#sectors">Secteurs</a>
+  <a href="#contact">Contact</a>
+</nav>
+
+<div class="hero">
+  <div class="hero-card">
+    <img src="logo.png" alt="Logo LVB">
+    <div class="logo-text">
+      <span>L</span><span>V</span><span>B</span>
+    </div>
+    <h1>
+      La vie n’est pas un fleuve tranquille<br>
+      mais <span>la vie est belle</span>
+    </h1>
+  </div>
+</div>
+
+<section id="about">
+  <div class="container">
+    <h2 class="section-title">Qui sommes-nous ?</h2>
+    <div class="section-content">
+      <p>LVB est une entreprise spécialisée dans la livraison à domicile et le service client.</p>
+      <img src="image1.png" class="image-box">
+    </div>
+  </div>
+</section>
+
+<section id="delivery" style="background:var(--gray);">
+  <div class="container">
+    <h2 class="section-title">Livraison à domicile</h2>
+    <div class="section-content">
+      <img src="image2.png" class="image-box">
+      <ul>
+        <li>Livraison standard</li>
+        <li>Livraison express</li>
+        <li>Livraison en point relais</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section id="service">
+  <div class="container">
+    <h2 class="section-title">Service client dédié</h2>
+    <div class="section-content">
+      <p>Centre d’appel expérimenté, suivi et service après-vente.</p>
+      <img src="img.png" class="image-box">
+    </div>
+  </div>
+</section>
+
+<section id="sectors" style="background:var(--gray);">
+  <div class="container">
+    <h2 class="section-title">Secteurs d’activité</h2>
+    <div class="section-content">
+      <img src="image6.png" class="image-box">
+
+      <ul>
+        <li>Agences de voyage</li>
+        <li>Banques</li>
+        <li>E-commerce</li>
+        <li>Autres entreprises</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section id="contact">
+  <div class="container">
+    <h2 class="section-title">Contactez-nous</h2>
+    <div class="section-content">
+      <p>
+        📍 Yaoundé<br>
+        📞 +237 655 598 831<br>
+        ✉ contact@laviestbelle.cm
+      </p>
+      <div>
+        <img src="image4.png" class="image-box">
+        <div class="socials">
+          <a href="https://wa.me/237655598831"><i class="fab fa-whatsapp"></i></a>
+          <a href="#"><i class="fab fa-facebook"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+          <a href="mailto:contact@laviestbelle.cm"><i class="fas fa-envelope"></i></a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <p>NIU : M072417073690M</p>
+  <p>RC/YAE/2024/B/450 – 12 Septembre 2024</p>
+  <p>© 2026 LVB – La Vie Est Belle</p>
+</footer>
+
+</body>
+</html>
