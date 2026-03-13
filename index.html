@@ -1,8 +1,8 @@
-
 <!DOCTYPE html>
 
 <html lang="fr">
 <head>
+
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -36,9 +36,12 @@
           font-family:Segoe UI,Arial,sans-serif;
       }
 
+      html{
+          scroll-behavior:smooth;
+      }
+
       body{
           color:var(--blue-dark);
-          scroll-behavior:smooth;
       }
 
       /* NAVBAR */
@@ -71,6 +74,33 @@
 
       .nav-links a:hover{
           color:var(--green);
+      }
+
+      /* MENU DEROULANT */
+
+      .dropdown{
+          position:relative;
+          display:inline-block;
+      }
+
+      .dropdown-content{
+          display:none;
+          position:absolute;
+          background:white;
+          min-width:220px;
+          box-shadow:0 5px 15px rgba(0,0,0,0.2);
+          padding:10px 0;
+          top:25px;
+      }
+
+      .dropdown-content a{
+          display:block;
+          padding:10px 20px;
+          margin:0;
+      }
+
+      .dropdown:hover .dropdown-content{
+          display:block;
       }
 
       /* HERO */
@@ -194,8 +224,24 @@
           padding:30px;
       }
 
-      footer p{
+      /* WHATSAPP FLOAT */
+
+      .whatsapp-float{
+          position:fixed;
+          bottom:25px;
+          right:25px;
+          background:#25D366;
           color:white;
+          font-size:28px;
+          width:60px;
+          height:60px;
+          display:flex;
+          align-items:center;
+          justify-content:center;
+          border-radius:50%;
+          text-decoration:none;
+          box-shadow:0 4px 10px rgba(0,0,0,0.3);
+          z-index:1000;
       }
 
       /* MOBILE */
@@ -219,11 +265,31 @@
   <div class="nav-logo">LVB</div>
 
   <div class="nav-links">
+
     <a href="#home">Accueil</a>
+
     <a href="#about">À propos</a>
-    <a href="#services">Services</a>
+
+    <div class="dropdown">
+
+      <a href="#">Services ▾</a>
+
+      <div class="dropdown-content">
+
+        <a href="#services">Livraisons</a>
+        <a href="#services">Déménagement</a>
+        <a href="#services">Transport sous-régional</a>
+        <a href="#services">Location voitures</a>
+        <a href="#services">Call Center</a>
+
+      </div>
+
+    </div>
+
     <a href="#business">Entreprises</a>
+
     <a href="#contact">Contact</a>
+
   </div>
 
 </div>
@@ -232,21 +298,27 @@
 
   <div class="hero-card">
 
-    <img src="logo.png" alt="Logo LVB">
+    <img src="logo.png">
 
     <div class="logo-text">
       <span>L</span><span>V</span><span>B</span>
     </div>
 
-    <h1>La vie n'est pas un fleuve tranquille<br>mais la vie est belle</h1>
+    <h1>
+      La vie n'est pas un fleuve tranquille<br>
+      mais la vie est belle
+    </h1>
 
-    <p>Votre partenaire logistique et transport à Yaoundé et en sous-région</p>
+    <p>
+      Votre partenaire logistique et transport à Yaoundé et en sous-région
+    </p>
 
     <div class="hero-buttons">
       <a href="#contact">Nous contacter</a>
     </div>
 
   </div>
+
 </div>
 
 <section id="about">
@@ -258,13 +330,17 @@
     <div class="grid">
 
       <p>
+
         <strong>LVB – La Vie est Belle</strong> simplifie la logistique et le transport pour particuliers et entreprises à Yaoundé et dans toute la sous-région.
+
         Notre mission est d'offrir des solutions rapides, fiables et accessibles pour le transport, la livraison et le déménagement.
+
       </p>
 
       <img src="image6.png" class="image-box">
 
     </div>
+
   </div>
 
 </section>
@@ -290,6 +366,7 @@
       <img src="image1.png" class="image-box">
 
     </div>
+
   </div>
 
 </section>
@@ -303,14 +380,17 @@
     <div class="grid">
 
       <p>
+
         Nous accompagnons les entreprises avec des solutions logistiques sur mesure :
         gestion du transport, livraison de marchandises, partenariats locaux et internationaux,
         suivi en temps réel et réduction des coûts logistiques.
+
       </p>
 
       <img src="image2.png" class="image-box">
 
     </div>
+
   </div>
 
 </section>
@@ -327,9 +407,12 @@
 
         📍 Yaoundé – Cameroun<br><br>
 
-        📞 WhatsApp / Call Center : <a href="https://wa.me/23765559883">+237 655598831</a><br><br>
+        📞 WhatsApp / Call Center : <a href="https://wa.me/237655598831">+237 655598831</a>
 
-        ✉ Email :contact@laviestbelle.cm</a>
+        <br><br>
+
+        ✉ Email :
+        <a href="mailto:contact@laviestbelle.cm">contact@laviestbelle.cm</a>
 
       </p>
 
@@ -360,6 +443,7 @@
       </div>
 
     </div>
+
   </div>
 
 </section>
@@ -371,6 +455,10 @@
   <p>© 2026 LVB – La Vie est Belle</p>
 
 </footer>
+
+<a href="https://wa.me/237655598831" class="whatsapp-float">
+  <i class="fab fa-whatsapp"></i>
+</a>
 
 </body>
 </html>
