@@ -1,9 +1,12 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
+
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <title>LVB – La Vie est Belle | Transport & Logistique à Yaoundé</title>
+
   <meta name="description" content="LVB - La Vie est Belle est une entreprise de transport et logistique basée à Yaoundé. Livraison rapide, déménagement, location de véhicules et transport sous-régional.">
   <meta name="keywords" content="transport Yaoundé, logistique Cameroun, livraison Yaoundé, déménagement Cameroun, location voiture Yaoundé, LVB La Vie est Belle">
   <meta name="author" content="LVB - La Vie est Belle">
@@ -17,6 +20,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
   <style>
+
       :root{
           --blue:#0B5ED7;
           --blue-dark:#083B8A;
@@ -28,7 +32,7 @@
           margin:0;
           padding:0;
           box-sizing:border-box;
-          font-family: 'Segoe UI', Arial, sans-serif;
+          font-family:Segoe UI,Arial,sans-serif;
       }
 
       html{
@@ -37,10 +41,10 @@
 
       body{
           color:var(--blue-dark);
-          background-color: white;
       }
 
-      /* NAVBAR REVISITÉE */
+      /* NAVBAR */
+
       .navbar{
           position:fixed;
           top:0;
@@ -50,37 +54,52 @@
           display:flex;
           justify-content:space-between;
           align-items:center;
-          padding:15px 5%;
+          padding:15px 30px;
           box-shadow:0 3px 10px rgba(0,0,0,0.1);
           z-index:1000;
       }
 
       .nav-logo{
           font-weight:bold;
-          font-size:24px;
-          color: var(--blue-dark);
+          font-size:22px;
       }
 
-      /* MENU À DROITE */
-      .nav-links {
-          display: flex;
-          align-items: center;
+      /* NEW DROPDOWN MENU TOP RIGHT */
+
+      .menu-toggle{
+          font-size:26px;
+          cursor:pointer;
+          color:var(--blue-dark);
       }
 
-      .nav-links a {
-          margin-left: 25px;
-          text-decoration: none;
-          color: var(--blue-dark);
-          font-weight: 600;
-          transition: 0.3s;
-          font-size: 15px;
+      .dropdown-menu{
+          position:absolute;
+          top:70px;
+          right:20px;
+          background:white;
+          width:200px;
+          box-shadow:0 5px 15px rgba(0,0,0,0.2);
+          border-radius:10px;
+          display:none;
+          padding:10px 0;
+          z-index:2000;
       }
 
-      .nav-links a:hover {
-          color: var(--green);
+      .dropdown-menu a{
+          display:block;
+          padding:12px 20px;
+          text-decoration:none;
+          color:var(--blue-dark);
+          font-weight:600;
       }
 
-      /* HERO SECTION */
+      .dropdown-menu a:hover{
+          background:var(--gray);
+          color:var(--green);
+      }
+
+      /* HERO */
+
       .hero{
           min-height:100vh;
           display:flex;
@@ -105,9 +124,8 @@
       }
 
       .logo-text{
-          font-size:45px;
+          font-size:40px;
           font-weight:900;
-          margin-bottom: 10px;
       }
 
       .logo-text span:nth-child(1){color:#0B5ED7;}
@@ -116,24 +134,22 @@
 
       .hero-buttons a{
           display:inline-block;
-          margin-top:25px;
-          padding:14px 35px;
+          margin:10px;
+          padding:14px 25px;
           background:var(--blue);
           color:white;
           border-radius:30px;
           text-decoration:none;
-          font-weight: bold;
-          transition: 0.3s;
       }
 
       .hero-buttons a:hover{
           background:var(--green);
-          transform: translateY(-2px);
       }
 
-      /* SECTIONS GÉNÉRALES */
+      /* SECTIONS */
+
       section{
-          padding:100px 20px;
+          padding:90px 20px;
       }
 
       .container{
@@ -142,14 +158,13 @@
       }
 
       .section-title{
-          font-size:32px;
-          margin-bottom:35px;
-          position: relative;
+          font-size:30px;
+          margin-bottom:30px;
       }
 
       .section-title::after{
           content:"";
-          width:60px;
+          width:70px;
           height:4px;
           background:var(--green);
           display:block;
@@ -159,16 +174,15 @@
       .grid{
           display:grid;
           grid-template-columns:1fr 1fr;
-          gap:50px;
+          gap:40px;
           align-items:center;
       }
 
       .image-box{
           width:100%;
-          height:300px;
+          height:280px;
           object-fit:cover;
-          border-radius:15px;
-          box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+          border-radius:10px;
       }
 
       ul{
@@ -176,26 +190,20 @@
       }
 
       ul li{
-          margin-bottom:15px;
-          font-size: 17px;
+          margin-bottom:10px;
       }
 
       ul li::before{
           content:"✔ ";
           color:var(--green);
-          font-weight: bold;
       }
 
-      /* CONTACT & SOCIAL */
-      .socials {
-          margin-top: 20px;
-      }
+      /* SOCIAL */
 
       .socials a{
-          font-size:28px;
+          font-size:30px;
           margin-right:20px;
-          color: var(--blue);
-          transition: 0.3s;
+          color:var(--blue-dark);
       }
 
       .socials a:hover{
@@ -203,109 +211,131 @@
       }
 
       /* FOOTER */
+
       footer{
           background:var(--blue-dark);
           color:white;
           text-align:center;
-          padding:40px 20px;
-      }
-
-      footer p {
-          margin-bottom: 5px;
-          opacity: 0.8;
-          font-size: 14px;
+          padding:30px;
       }
 
       /* WHATSAPP FLOAT */
+
       .whatsapp-float{
           position:fixed;
-          bottom:30px;
-          right:30px;
+          bottom:25px;
+          right:25px;
           background:#25D366;
           color:white;
-          font-size:30px;
-          width:65px;
-          height:65px;
+          font-size:28px;
+          width:60px;
+          height:60px;
           display:flex;
           align-items:center;
           justify-content:center;
           border-radius:50%;
           text-decoration:none;
-          box-shadow:0 6px 15px rgba(0,0,0,0.2);
+          box-shadow:0 4px 10px rgba(0,0,0,0.3);
           z-index:1000;
-          transition: 0.3s;
       }
 
-      .whatsapp-float:hover {
-          transform: scale(1.1);
-      }
+      /* MOBILE */
 
-      /* RESPONSIVE MOBILE */
       @media(max-width:900px){
           .grid{
               grid-template-columns:1fr;
-              text-align: center;
-          }
-          .section-title::after {
-              margin: 10px auto;
-          }
-          .nav-links a {
-              margin-left: 15px;
-              font-size: 13px;
           }
       }
+
   </style>
+
 </head>
 
 <body>
 
 <div class="navbar">
+
   <div class="nav-logo">LVB</div>
 
-  <div class="nav-links">
+  <!-- NEW MENU BUTTON -->
+  <div class="menu-toggle" onclick="toggleMenu()">
+    <i class="fas fa-bars"></i>
+  </div>
+
+  <!-- NEW DROPDOWN MENU -->
+  <div class="dropdown-menu" id="menu">
     <a href="#home">Accueil</a>
     <a href="#about">À propos</a>
-    <a href="#services">Services</a> <a href="#business">Entreprises</a>
+    <a href="#services">Services</a>
+    <a href="#business">Entreprises</a>
     <a href="#contact">Contact</a>
   </div>
+
 </div>
 
+<script>
+function toggleMenu(){
+    const menu = document.getElementById("menu");
+    menu.style.display = menu.style.display === "block" ? "none" : "block";
+}
+</script>
+
 <div class="hero" id="home">
+
   <div class="hero-card">
-    <img src="logo.png" alt="Logo LVB">
+
+    <img src="logo.png">
+
     <div class="logo-text">
       <span>L</span><span>V</span><span>B</span>
     </div>
+
     <h1>
       La vie n'est pas un fleuve tranquille<br>
       mais la vie est belle
     </h1>
-    <p style="margin-top: 15px; font-size: 18px; color: #555;">
+
+    <p>
       Votre partenaire logistique et transport à Yaoundé et en sous-région
     </p>
+
     <div class="hero-buttons">
       <a href="#contact">Nous contacter</a>
     </div>
+
   </div>
+
 </div>
 
 <section id="about">
+
   <div class="container">
+
     <h2 class="section-title">À propos</h2>
+
     <div class="grid">
-      <p style="line-height: 1.6; font-size: 17px;">
-        <strong>LVB – La Vie est Belle</strong> simplifie la logistique et le transport pour particuliers et entreprises à Yaoundé et dans toute la sous-région.<br><br>
+
+      <p>
+        <strong>LVB – La Vie est Belle</strong> simplifie la logistique et le transport pour particuliers et entreprises à Yaoundé et dans toute la sous-région.
         Notre mission est d'offrir des solutions rapides, fiables et accessibles pour le transport, la livraison et le déménagement.
       </p>
-      <img src="image6.png" class="image-box" alt="A propos LVB">
+
+      <img src="image6.png" class="image-box">
+
     </div>
+
   </div>
+
 </section>
 
 <section id="services" style="background:var(--gray)">
+
   <div class="container">
+
     <h2 class="section-title">Nos services</h2>
+
     <div class="grid">
+
       <ul>
         <li>Livraisons inter-ville rapides (scooters)</li>
         <li>Déménagements et transport par camions</li>
@@ -313,59 +343,77 @@
         <li>Location de voitures pour particuliers et entreprises</li>
         <li>Call Center – support client et suivi des livraisons</li>
       </ul>
-      <img src="image1.png" class="image-box" alt="Services LVB">
+
+      <img src="image1.png" class="image-box">
+
     </div>
+
   </div>
+
 </section>
 
 <section id="business">
+
   <div class="container">
+
     <h2 class="section-title">Solutions entreprises</h2>
+
     <div class="grid">
-      <p style="line-height: 1.6; font-size: 17px;">
+
+      <p>
         Nous accompagnons les entreprises avec des solutions logistiques sur mesure :
         gestion du transport, livraison de marchandises, partenariats locaux et internationaux,
         suivi en temps réel et réduction des coûts logistiques.
       </p>
-      <img src="image2.png" class="image-box" alt="Solutions Business">
+
+      <img src="image2.png" class="image-box">
+
     </div>
+
   </div>
+
 </section>
 
 <section id="contact">
+
   <div class="container">
+
     <h2 class="section-title">Contact</h2>
+
     <div class="grid">
-      <div style="font-size: 18px;">
-        <p><strong>📍 Localisation :</strong><br> Yaoundé – Cameroun</p><br>
-        <p><strong>📞 WhatsApp / Call Center :</strong><br> 
-           <a href="https://wa.me/237655598831" style="color:var(--blue); text-decoration: none;">+237 655598831</a>
-        </p><br>
-        <p><strong>✉ Email :</strong><br>
-           <a href="mailto:contact@laviestbelle.cm" style="color:var(--blue); text-decoration: none;">contact@laviestbelle.cm</a>
-        </p>
-      </div>
+
+      <p>
+        📍 Yaoundé – Cameroun<br><br>
+        📞 WhatsApp / Call Center : <a href="https://wa.me/237655598831">+237 655598831</a><br><br>
+        ✉ Email : <a href="mailto:contact@laviestbelle.cm">contact@laviestbelle.cm</a>
+      </p>
 
       <div>
-        <img src="img.png" class="image-box" alt="Contactez-nous">
+
+        <img src="img.png" class="image-box">
+
         <div class="socials">
-          <a href="https://wa.me/237655598831" title="WhatsApp"><i class="fab fa-whatsapp"></i></a>
-          <a href="https://www.facebook.com/share/1GTPTWvuDW/?mibextid=wwXIfr" title="Facebook"><i class="fab fa-facebook"></i></a>
-          <a href="#" title="Instagram"><i class="fab fa-instagram"></i></a>
-          <a href="#" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+          <a href="https://wa.me/237655598831"><i class="fab fa-whatsapp"></i></a>
+          <a href="https://www.facebook.com/share/1GTPTWvuDW/?mibextid=wwXIfr"><i class="fab fa-facebook"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+          <a href="#"><i class="fab fa-linkedin"></i></a>
         </div>
+
       </div>
+
     </div>
+
   </div>
+
 </section>
 
 <footer>
-  <p><strong>NIU :</strong> M072417073690M</p>
-  <p><strong>RC/YAE/2024/B/450</strong> – 12 Septembre 2024</p>
-  <p>© 2026 LVB – La Vie est Belle. Tous droits réservés.</p>
+  <p>NIU : M072417073690M</p>
+  <p>RC/YAE/2024/B/450 – 12 Septembre 2024</p>
+  <p>© 2026 LVB – La Vie est Belle</p>
 </footer>
 
-<a href="https://wa.me/237655598831" class="whatsapp-float" target="_blank">
+<a href="https://wa.me/237655598831" class="whatsapp-float">
   <i class="fab fa-whatsapp"></i>
 </a>
 
